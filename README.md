@@ -194,20 +194,6 @@ Use this only if you change wheel scale, vehicle class, or (not recommended on 0
 | Car explodes from a tap | `collision_damage_multiplier` too high and/or health too low |
 | Car never dies | multiplier near 0 and health far above 1000 |
 
-## 6. SASDK (optional live check)
-
-After the car is in the game, an ASI linked to `SASDK::sasdk` can read the live vehicle:
-
-```cpp
-#include <sasdk/sasdk.hpp>
-using namespace sasdk::sa10us;
-if (CVehicle* pv = Game::player_vehicle()) {
-    CVehicleRef veh(pv);
-    // model_index @ 0x22, health @ 0x4C0
-}
-```
-
-See `examples/vehicle_health.cpp` in the repo root.
 
 ---
 
