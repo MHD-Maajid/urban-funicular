@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "name": "Sultan Sport",
+    "slug": "sultan-sport",
+    "author": "vehicle-generation",
+    "notes": "Tuned Sultan (560). Base numbers from chandling-svr HandlingDefault index 160."
+  },
+  "replace": {
+    "model_id": 560,
+    "handling_id": "SULTAN",
+    "keep_stock_filenames": true
+  },
+  "assets": {
+    "dff": "../assets/sultan.dff",
+    "txd": "../assets/sultan.txd"
+  },
+  "ide": {
+    "type": "car",
+    "game_name": "SULTAN",
+    "anims": "null",
+    "vehicle_class": "executive",
+    "frequency": 10,
+    "flags": 0,
+    "comprules": 0,
+    "wheel_id": 0,
+    "wheel_scale_front": 0.7,
+    "wheel_scale_rear": 0.7
+  },
+  "damage": {
+    "spawn_health": 1000.0
+  },
+  "samp": {
+    "apply_mode": "model"
+  },
+  "handling": {
+    "mass": 1400.0,
+    "turn_mass": 3400.0,
+    "drag_multiplier": 2.2,
+    "centre_of_mass_x": 0.0,
+    "centre_of_mass_y": 0.1,
+    "centre_of_mass_z": -0.1,
+    "percent_submerged": 75,
+    "traction_multiplier": 0.85,
+    "traction_loss": 0.8,
+    "traction_bias": 0.5,
+    "number_of_gears": 5,
+    "max_velocity": 215.0,
+    "engine_acceleration": 12.8,
+    "engine_inertia": 5.0,
+    "drive_type": "4",
+    "engine_type": "P",
+    "brake_deceleration": 11.0,
+    "brake_bias": 0.5,
+    "abs": 0,
+    "steering_lock": 32.0,
+    "suspension_force_level": 1.25,
+    "suspension_damping_level": 0.16,
+    "suspension_high_spd_com_damp": 0.0,
+    "suspension_upper_limit": 0.28,
+    "suspension_lower_limit": -0.2,
+    "suspension_bias": 0.5,
+    "suspension_anti_dive": 0.3,
+    "seat_offset_distance": 0.25,
+    "collision_damage_multiplier": 0.45,
+    "monetary_value": 35000,
+    "front_lights": "SMALL",
+    "rear_lights": "SMALL",
+    "anim_group": 0,
+    "model_flags": ["CONVERTIBLE", "DOUBLE_EXHAUST"],
+    "handling_flags": ["2G_BOOST", "STREET_RACER"]
+  }
+}

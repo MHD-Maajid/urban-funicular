@@ -1,0 +1,15 @@
+{
+  "name": "Sultan Sport",
+  "model_id": 560,
+  "handling_id": "SULTAN",
+  "dff_name": "sultan",
+  "txd_name": "sultan",
+  "model_flags_hex": "2800",
+  "handling_flags_hex": "4000002",
+  "spawn_health": 1000.0,
+  "asset_notes": [
+    "DFF (RpClump): missing file C:\\Users\\muham\\Downloads\\sa-sdk-main\\sa-sdk-main\\vehicle-generation\\assets\\sultan.dff",
+    "TXD (RwTexDictionary): missing file C:\\Users\\muham\\Downloads\\sa-sdk-main\\sa-sdk-main\\vehicle-generation\\assets\\sultan.txd",
+    "COL: none listed (normal if collision is inside the DFF)"
+  ]
+}

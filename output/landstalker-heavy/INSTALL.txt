@@ -1,0 +1,41 @@
+Vehicle: Landstalker Heavy
+Replace model ID: 400 (landstal)
+handling.cfg identifier: LANDSTAL
+
+=== GTA:SA client files (every player must have these) ===
+
+1. Put your mesh/textures next to this folder, then copy them over the stock names:
+     landstal.dff
+     landstal.txd
+   Install with one of:
+     a) ModLoader:  GTA San Andreas/modloader/<your-mod>/landstal.dff and .txd
+     b) IMG Tool 2.0: replace entries inside models/gta3.img (backup first)
+     c) Fastman92 / 0.3.DL custom models (only if you are NOT using filename replace)
+
+2. Collision: COL is usually baked into the DFF. If you have a separate .col,
+   the COL model name (22 chars) must match the DFF name.
+
+3. Single-player / offline physics: replace the matching line in
+     GTA San Andreas/data/handling.cfg
+   Look for identifier LANDSTAL and paste handling.cfg.line.txt over that line.
+   Backup handling.cfg first.
+
+4. vehicles.ide: ONLY edit data/vehicles.ide if keep_stock_filenames is false
+   or you changed wheel scale / vehicle class. For normal SA-MP replace mods,
+   leave vehicles.ide alone so streaming still finds infernus.dff etc.
+
+=== SA-MP server ===
+
+1. Copy ../../chandling-svr/chandlingsvr.inc into pawno/include/
+2. Put the compiled chandling plugin in server plugins/ and enable it in server.cfg
+3. Players need the matching client CHandling plugin (github.com/dotSILENT/chandling)
+4. Compile samp/chandling.pwn as a filterscript and add it to filterscripts in server.cfg
+5. Spawn with CreateVehicle(400, x, y, z, angle, -1, -1, 0);
+
+SASDK note: live health is CVehicle::m_fHealth @ +0x4C0. Full = 1000. <= 0 wrecks.
+Collision damage uses handling.collision_damage_multiplier (0 = tank, ~1 = fragile).
+
+Asset checks:
+  - DFF (RpClump): missing file C:\Users\muham\Downloads\sa-sdk-main\sa-sdk-main\vehicle-generation\assets\landstal.dff
+  - TXD (RwTexDictionary): missing file C:\Users\muham\Downloads\sa-sdk-main\sa-sdk-main\vehicle-generation\assets\landstal.txd
+  - COL: none listed (normal if collision is inside the DFF)

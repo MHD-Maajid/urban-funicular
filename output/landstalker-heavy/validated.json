@@ -1,0 +1,15 @@
+{
+  "name": "Landstalker Heavy",
+  "model_id": 400,
+  "handling_id": "LANDSTAL",
+  "dff_name": "landstal",
+  "txd_name": "landstal",
+  "model_flags_hex": "20",
+  "handling_flags_hex": "500002",
+  "spawn_health": 1250.0,
+  "asset_notes": [
+    "DFF (RpClump): missing file C:\\Users\\muham\\Downloads\\sa-sdk-main\\sa-sdk-main\\vehicle-generation\\assets\\landstal.dff",
+    "TXD (RwTexDictionary): missing file C:\\Users\\muham\\Downloads\\sa-sdk-main\\sa-sdk-main\\vehicle-generation\\assets\\landstal.txd",
+    "COL: none listed (normal if collision is inside the DFF)"
+  ]
+}

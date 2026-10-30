@@ -1,0 +1,15 @@
+{
+  "name": "Nightfire",
+  "model_id": 411,
+  "handling_id": "INFERNUS",
+  "dff_name": "infernus",
+  "txd_name": "infernus",
+  "model_flags_hex": "40002004",
+  "handling_flags_hex": "C04000",
+  "spawn_health": 1000.0,
+  "asset_notes": [
+    "DFF (RpClump): missing file C:\\Users\\muham\\Downloads\\sa-sdk-main\\sa-sdk-main\\vehicle-generation\\assets\\infernus.dff",
+    "TXD (RwTexDictionary): missing file C:\\Users\\muham\\Downloads\\sa-sdk-main\\sa-sdk-main\\vehicle-generation\\assets\\infernus.txd",
+    "COL: none listed (normal if collision is inside the DFF)"
+  ]
+}

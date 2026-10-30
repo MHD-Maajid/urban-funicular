@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/sasdk/vehicle-generation/vehicle.schema.json",
+  "title": "GTA:SA / SA-MP custom vehicle definition",
+  "type": "object",
+  "required": ["meta", "replace", "handling"],
+  "additionalProperties": false,
+  "properties": {
+    "$comment": { "type": "string" },
+    "meta": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "author": { "type": "string" },
+        "notes": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "replace": {
+      "type": "object",
+      "required": ["model_id"],
+      "properties": {
+        "model_id": { "type": "integer", "minimum": 400, "maximum": 611 },
+        "handling_id": { "type": "string", "pattern": "^[A-Z0-9_]{1,8}$" },
+        "keep_stock_filenames": { "type": "boolean", "default": true }
+      },
+      "additionalProperties": false
+    },
+    "assets": {
+      "type": "object",
+      "properties": {
+        "dff": { "type": "string" },
+        "txd": { "type": "string" },
+        "col": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "ide": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string" },
+        "model_name": { "type": "string", "maxLength": 23 },
+        "txd_name": { "type": "string", "maxLength": 23 },
+        "game_name": { "type": "string", "maxLength": 8 },
+        "anims": { "type": "string" },
+        "vehicle_class": { "type": "string" },
+        "frequency": { "type": "integer" },
+        "flags": { "type": "integer" },
+        "comprules": { "type": "integer" },
+        "wheel_id": { "type": "integer" },
+        "wheel_scale_front": { "type": "number" },
+        "wheel_scale_rear": { "type": "number" }
+      },
+      "additionalProperties": false
+    },
+    "damage": {
+      "type": "object",
+      "properties": {
+        "spawn_health": { "type": "number", "exclusiveMinimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "samp": {
+      "type": "object",
+      "properties": {
+        "apply_mode": { "enum": ["model", "vehicle"] }
+      },
+      "additionalProperties": false
+    },
+    "handling": {
+      "type": "object",
+      "required": [
+        "mass", "turn_mass", "drag_multiplier",
+        "centre_of_mass_x", "centre_of_mass_y", "centre_of_mass_z",
+        "percent_submerged", "traction_multiplier", "traction_loss", "traction_bias",
+        "number_of_gears", "max_velocity", "engine_acceleration", "engine_inertia",
+        "drive_type", "engine_type", "brake_deceleration", "brake_bias", "abs",
+        "steering_lock", "suspension_force_level", "suspension_damping_level",
+        "suspension_high_spd_com_damp", "suspension_upper_limit", "suspension_lower_limit",
+        "suspension_bias", "suspension_anti_dive", "seat_offset_distance",
+        "collision_damage_multiplier", "monetary_value", "front_lights", "rear_lights",
+        "anim_group"
+      ],
+      "properties": {
+        "mass": { "type": "number" },
+        "turn_mass": { "type": "number" },
+        "drag_multiplier": { "type": "number" },
+        "centre_of_mass_x": { "type": "number" },
+        "centre_of_mass_y": { "type": "number" },
+        "centre_of_mass_z": { "type": "number" },
+        "percent_submerged": { "type": "integer" },
+        "traction_multiplier": { "type": "number" },
+        "traction_loss": { "type": "number" },
+        "traction_bias": { "type": "number" },
+        "number_of_gears": { "type": "integer" },
+        "max_velocity": { "type": "number" },
+        "engine_acceleration": { "type": "number" },
+        "engine_inertia": { "type": "number" },
+        "drive_type": { "enum": ["R", "F", "4", "r", "f"] },
+        "engine_type": { "enum": ["P", "D", "E", "p", "d", "e"] },
+        "brake_deceleration": { "type": "number" },
+        "brake_bias": { "type": "number" },
+        "abs": { "type": ["integer", "boolean"] },
+        "steering_lock": { "type": "number" },
+        "suspension_force_level": { "type": "number" },
+        "suspension_damping_level": { "type": "number" },
+        "suspension_high_spd_com_damp": { "type": "number" },
+        "suspension_upper_limit": { "type": "number" },
+        "suspension_lower_limit": { "type": "number" },
+        "suspension_bias": { "type": "number" },
+        "suspension_anti_dive": { "type": "number" },
+        "seat_offset_distance": { "type": "number" },
+        "collision_damage_multiplier": { "type": "number" },
+        "monetary_value": { "type": "integer" },
+        "front_lights": { "type": ["string", "integer"] },
+        "rear_lights": { "type": ["string", "integer"] },
+        "anim_group": { "type": "integer" },
+        "model_flags": { "type": ["array", "string", "integer"] },
+        "handling_flags": { "type": ["array", "string", "integer"] }
+      },
+      "additionalProperties": false
+    }
+  }
+}

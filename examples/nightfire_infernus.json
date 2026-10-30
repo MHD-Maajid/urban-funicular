@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "name": "Nightfire",
+    "slug": "nightfire",
+    "author": "vehicle-generation",
+    "notes": "Sports car replacing Infernus (411). Physics taken from chandling-svr HandlingDefault index 11, then accel/brake/damage retuned."
+  },
+  "replace": {
+    "model_id": 411,
+    "handling_id": "INFERNUS",
+    "keep_stock_filenames": true
+  },
+  "assets": {
+    "dff": "../assets/infernus.dff",
+    "txd": "../assets/infernus.txd"
+  },
+  "ide": {
+    "type": "car",
+    "game_name": "INFERNUS",
+    "anims": "null",
+    "vehicle_class": "executive",
+    "frequency": 10,
+    "flags": 0,
+    "comprules": 0,
+    "wheel_id": 0,
+    "wheel_scale_front": 0.7,
+    "wheel_scale_rear": 0.7
+  },
+  "damage": {
+    "spawn_health": 1000.0
+  },
+  "samp": {
+    "apply_mode": "model"
+  },
+  "handling": {
+    "mass": 1400.0,
+    "turn_mass": 2725.3,
+    "drag_multiplier": 1.45,
+    "centre_of_mass_x": 0.0,
+    "centre_of_mass_y": 0.0,
+    "centre_of_mass_z": -0.25,
+    "percent_submerged": 70,
+    "traction_multiplier": 0.78,
+    "traction_loss": 0.82,
+    "traction_bias": 0.5,
+    "number_of_gears": 5,
+    "max_velocity": 250.0,
+    "engine_acceleration": 13.5,
+    "engine_inertia": 8.0,
+    "drive_type": "4",
+    "engine_type": "P",
+    "brake_deceleration": 12.5,
+    "brake_bias": 0.52,
+    "abs": 0,
+    "steering_lock": 32.0,
+    "suspension_force_level": 1.25,
+    "suspension_damping_level": 0.19,
+    "suspension_high_spd_com_damp": 0.0,
+    "suspension_upper_limit": 0.25,
+    "suspension_lower_limit": -0.1,
+    "suspension_bias": 0.5,
+    "suspension_anti_dive": 0.4,
+    "seat_offset_distance": 0.37,
+    "collision_damage_multiplier": 0.55,
+    "monetary_value": 95000,
+    "front_lights": "SMALL",
+    "rear_lights": "SMALL",
+    "anim_group": 1,
+    "model_flags": ["IS_LOW", "DOUBLE_EXHAUST", "FORCE_GROUND_CLEARANCE"],
+    "handling_flags": ["WHEEL_R_WIDE", "HALOGEN_LIGHTS", "PROC_REARWHEEL_1ST"]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "name": "Landstalker Heavy",
+    "slug": "landstalker-heavy",
+    "author": "vehicle-generation",
+    "notes": "Heavier Landstalker (400). Base numbers from chandling-svr HandlingDefault index 0."
+  },
+  "replace": {
+    "model_id": 400,
+    "handling_id": "LANDSTAL",
+    "keep_stock_filenames": true
+  },
+  "assets": {
+    "dff": "../assets/landstal.dff",
+    "txd": "../assets/landstal.txd"
+  },
+  "ide": {
+    "type": "car",
+    "game_name": "LANDSTK",
+    "anims": "null",
+    "vehicle_class": "richfamily",
+    "frequency": 10,
+    "flags": 0,
+    "comprules": 0,
+    "wheel_id": 0,
+    "wheel_scale_front": 0.7,
+    "wheel_scale_rear": 0.7
+  },
+  "damage": {
+    "spawn_health": 1250.0
+  },
+  "samp": {
+    "apply_mode": "model"
+  },
+  "handling": {
+    "mass": 2200.0,
+    "turn_mass": 6000.0,
+    "drag_multiplier": 2.8,
+    "centre_of_mass_x": 0.0,
+    "centre_of_mass_y": 0.0,
+    "centre_of_mass_z": -0.3,
+    "percent_submerged": 85,
+    "traction_multiplier": 0.8,
+    "traction_loss": 0.85,
+    "traction_bias": 0.5,
+    "number_of_gears": 5,
+    "max_velocity": 155.0,
+    "engine_acceleration": 9.0,
+    "engine_inertia": 20.0,
+    "drive_type": "4",
+    "engine_type": "D",
+    "brake_deceleration": 7.5,
+    "brake_bias": 0.6,
+    "abs": 0,
+    "steering_lock": 35.0,
+    "suspension_force_level": 2.2,
+    "suspension_damping_level": 0.09,
+    "suspension_high_spd_com_damp": 0.0,
+    "suspension_upper_limit": 0.32,
+    "suspension_lower_limit": -0.16,
+    "suspension_bias": 0.5,
+    "suspension_anti_dive": 0.25,
+    "seat_offset_distance": 0.27,
+    "collision_damage_multiplier": 0.18,
+    "monetary_value": 25000,
+    "front_lights": "LONG",
+    "rear_lights": "SMALL",
+    "anim_group": 0,
+    "model_flags": ["HANGING_BOOT"],
+    "handling_flags": ["2G_BOOST", "OFFROAD_ABILITY", "HALOGEN_LIGHTS"]
+  }
+}
